@@ -164,6 +164,21 @@
 
   .empty{ text-align:center; padding:50px 20px; color:var(--ink-400); }
 
+  .checkout-section{ margin:34px 0 8px; }
+  .checkout-intro{ margin:0 0 16px; font-size:0.88rem; color:var(--ink-600); line-height:1.5; max-width:640px; }
+  .checkout-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:16px; }
+  .checkout-card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px;
+    box-shadow:var(--shadow); display:flex; flex-direction:column; gap:10px;
+  }
+  .checkout-card h3{ margin:0; font-size:1.02rem; color:var(--ink-900); }
+  .checkout-card p.desc{ margin:0; font-size:0.85rem; color:var(--ink-600); line-height:1.5; flex-grow:1; }
+  .checkout-btn{
+    align-self:flex-start; background:var(--teal-600); color:#fff; font-weight:700; font-size:0.82rem;
+    padding:8px 16px; border-radius:8px; text-decoration:none; transition:background .12s; border:1px solid var(--teal-600);
+  }
+  .checkout-btn:hover{ background:var(--coral-600); border-color:var(--coral-600); }
+
   footer{
     margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
     font-size:0.76rem; color:var(--ink-400); line-height:1.6;
@@ -1037,6 +1052,18 @@
         
       </div>
       <a class="link" href="https://www.unshackledvc.com/" target="_blank" rel="noopener">Visit site →</a>
+    </div>
+  </div>
+
+  <div class="checkout-section">
+    <div class="row-label" style="display:block; margin-bottom:6px;">Explore More</div>
+    <p class="checkout-intro">Discover trusted organizations, partners, and services that provide additional support for founders, entrepreneurs, and growing businesses.</p>
+    <div class="checkout-grid">
+      <div class="checkout-card">
+        <h3>Okundaye Legal PLLC</h3>
+        <p class="desc">Brooklyn-based mission-driven and impact finance law practice founded by Osahon Okundaye, advising founders, fund managers, and investors on structuring capital, private placements, and securities compliance.</p>
+        <a class="checkout-btn" href="https://www.okundayelegal.com/" target="_blank" rel="noopener">Visit Website</a>
+      </div>
     </div>
   </div>
 
