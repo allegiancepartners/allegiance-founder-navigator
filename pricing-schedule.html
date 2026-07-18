@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!-- saved from url=(0233)file:///C:/Users/johna/AppData/Roaming/Claude/local-agent-mode-sessions/b9e2a95f-e6e0-4701-a6a1-eebe302e1c70/c7eb783a-2a46-484a-b608-34ac8c1a1cf1/local_0e4d6b5b-e9c1-4dbe-a8c3-7a67088939f4/outputs/Allegiance%20Pricing%20Schedule.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Allegiance Partners | Pricing Schedule</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --navy:#0E2841;
+    --navy-light:#16405e;
+    --teal:#156082;
+    --gold:#C9A24B;
+    --gold-light:#e6d3a0;
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --ink:#1c2b36;
+    --muted:#6b7a86;
+    --line:#e3e7eb;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  header{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color:#fff;
+    padding:44px 6vw 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    right:-80px; top:-80px;
+    width:280px; height:280px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(201,162,75,0.35), transparent 70%);
+  }
+  .brand{
+    display:flex; align-items:center; gap:14px;
+  }
+  .brand-name{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+  }
+  h1{
+    margin:22px 0 8px;
+    font-size:clamp(26px,3.4vw,40px);
+    font-weight:600;
+    letter-spacing:.3px;
+  }
+  header p.sub{
+    margin:0;
+    color:#c7d3dc;
+    font-size:15px;
+    max-width:620px;
+    line-height:1.5;
+  }
+
+  .timeline{
+    max-width:1100px;
+    margin:-34px auto 0;
+    padding:0 6vw;
+    position:relative;
+    z-index:2;
+  }
+  .tabs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+  }
+  .tab{
+    background:var(--card);
+    border-radius:14px;
+    padding:18px 20px;
+    box-shadow:0 10px 30px rgba(14,40,65,0.12);
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:all .18s ease;
+    position:relative;
+  }
+  .tab:hover{ transform:translateY(-2px); }
+  .tab.active{
+    border-color:var(--gold);
+    box-shadow:0 14px 34px rgba(14,40,65,0.18);
+  }
+  .tab .tag{
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .tab h3{
+    margin:6px 0 4px;
+    font-size:17px;
+    color:var(--navy);
+  }
+  .tab p{
+    margin:0;
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.4;
+  }
+
+  main{
+    max-width:1100px;
+    margin:0 auto;
+    padding:40px 6vw 80px;
+  }
+  .panel{ display:none; animation:fade .25s ease; }
+  .panel.active{ display:block; }
+  @keyframes fade{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+  .panel-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:10px;
+    margin-bottom:22px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:16px;
+  }
+  .panel-head h2{
+    margin:0;
+    color:var(--navy);
+    font-size:24px;
+  }
+  .panel-head .desc{
+    color:var(--muted);
+    font-size:13.5px;
+    max-width:520px;
+  }
+  .badge{
+    background:var(--navy);
+    color:var(--gold-light);
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:6px 12px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+  }
+  .item{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    transition:box-shadow .15s ease, border-color .15s ease;
+  }
+  .item:hover{
+    box-shadow:0 6px 18px rgba(14,40,65,0.08);
+    border-color:var(--gold);
+  }
+  .item .name{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.35;
+  }
+  .item .price{
+    font-size:14px;
+    font-weight:700;
+    color:var(--teal);
+    white-space:nowrap;
+    text-align:right;
+  }
+
+  .section-label{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    margin:34px 0 12px;
+  }
+
+  .free-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px;
+  }
+  .free-item{
+    background:#fff;
+    border:1px dashed var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+    font-size:13.5px;
+    color:var(--ink);
+    display:flex; align-items:center; gap:8px;
+  }
+  .free-item::before{
+    content:"✓";
+    color:var(--teal);
+    font-weight:700;
+  }
+
+  .grant-box{
+    margin-top:28px;
+    background:linear-gradient(135deg, var(--navy), var(--navy-light));
+    color:#fff;
+    border-radius:14px;
+    padding:24px 26px;
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .grant-box .amount{
+    font-size:34px;
+    font-weight:700;
+    color:var(--gold-light);
+    line-height:1;
+  }
+  .grant-box .amount span{
+    display:block;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#a9bdcc;
+    font-weight:500;
+    margin-top:4px;
+  }
+  .grant-box .grant-text{
+    flex:1;
+    min-width:240px;
+    font-size:13.5px;
+    color:#dbe4ea;
+    line-height:1.5;
+  }
+
+  .or-divider{
+    display:flex; align-items:center; gap:12px;
+    margin:20px 0;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  .or-divider::before,.or-divider::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--line);
+  }
+
+  .exit-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:6px;
+  }
+  @media (max-width:720px){
+    .exit-split{ grid-template-columns:1fr; }
+    .tabs{ grid-template-columns:1fr; }
+  }
+  .exit-card{
+    background:var(--card);
+    border-radius:14px;
+    border:1px solid var(--line);
+    padding:20px;
+  }
+  .exit-card h4{
+    margin:0 0 12px;
+    color:var(--navy);
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .exit-card h4 .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--gold);
+  }
+
+  footer{
+    text-align:center;
+    padding:26px 6vw 40px;
+    color:var(--muted);
+    font-size:12px;
+  }
+  footer strong{ color:var(--navy); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-name">Allegiance Partners</div>
+  </div>
+  <h1>Pricing Schedule</h1>
+  <p class="sub">A three-phase pathway — from first-year startup formation, through Pathway 501(c)3 support, to pre-Exit planning with Partners and post-Exit entry into our Family Office.</p>
+</header>
+
+<div class="timeline">
+  <div class="tabs">
+    <div class="tab active" data-panel="p1">
+      <div class="tag">Phase 1</div>
+      <h3>Pathway — 501(c)3</h3>
+      <p>Year 1 startup support &amp; founder starter pack</p>
+    </div>
+    <div class="tab" data-panel="p2">
+      <div class="tag">Phase 2</div>
+      <h3>Pathway — Year 2+</h3>
+      <p>Ongoing support, paid by Founder</p>
+    </div>
+    <div class="tab" data-panel="p3">
+      <div class="tag">Phase 3</div>
+      <h3>Partners — Family Office</h3>
+      <p>Pre-Exit planning &amp; post-Exit Family Office</p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- PHASE 1 -->
+  <section class="panel active" id="p1">
+    <div class="panel-head">
+      <div>
+        <h2>Phase 1 · Pathway 501(c)3</h2>
+        <div class="desc">Starter Pack for Founders — pro bono in Year 1.</div>
+      </div>
+      <div class="badge">Year 1 · Startup</div>
+    </div>
+
+    <div class="grid">
+      <div class="item"><div class="name">Professional Advisory</div><div class="price">$200/hr</div></div>
+      <div class="item"><div class="name">IP Advisory</div><div class="price">$200/hr</div></div>
+      <div class="item"><div class="name">Startup Advisory</div><div class="price">$200/hr</div></div>
+      <div class="item"><div class="name">Incorporate Company</div><div class="price">$700</div></div>
+      <div class="item"><div class="name">Basic Bookkeeping (Y1)</div><div class="price">$500</div></div>
+      <div class="item"><div class="name">Corporate Tax Return (Y1)</div><div class="price">$500</div></div>
+      <div class="item"><div class="name">Personal Tax Return (Y1)</div><div class="price">$500</div></div>
+      <div class="item"><div class="name">Fractional Company Secretary (Y1)</div><div class="price">$500</div></div>
+      <div class="item"><div class="name">Fractional CFO (Y1)</div><div class="price">$500</div></div>
+      <div class="item"><div class="name">Incorporate &amp; Register 501(c)3</div><div class="price">$1,000</div></div>
+      <div class="item"><div class="name">Fiscal Sponsorship</div><div class="price">5% of funding</div></div>
+      <div class="item"><div class="name">Opengate.io (6-mo subscription)</div><div class="price">$29.90/mo</div></div>
+    </div>
+
+    <div class="section-label">Included at no charge</div>
+    <div class="free-grid">
+      <div class="free-item">Initial consultation / discovery call</div>
+      <div class="free-item">Advice on basic estate planning</div>
+      <div class="free-item">Unlimited access to ecosystem &amp; networking</div>
+      <div class="free-item">Advice on opening bank accounts</div>
+    </div>
+
+    <div class="grant-box">
+      <div class="amount">$2,500<span>Starter Pack Grant</span></div>
+      <div class="grant-text">
+        Applied toward any combination of the services above, delivered by Allegiance Partners and its network of Independent Professional Advisors. <strong>Not cash.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 2 -->
+  <section class="panel" id="p2">
+    <div class="panel-head">
+      <div>
+        <h2>Phase 2 · Pathway — Year 2+</h2>
+        <div class="desc">Ongoing support after the founder's first year, paid directly by the Founder.</div>
+      </div>
+      <div class="badge">Year 2+</div>
+    </div>
+
+    <div class="grid">
+      <div class="item"><div class="name">Monthly Subscription</div><div class="price">$29.99/mo</div></div>
+    </div>
+
+    <div class="or-divider">or</div>
+
+    <div class="grid">
+      <div class="item"><div class="name">Individual Fee Services Schedule</div><div class="price">As Phase 1 rates</div></div>
+    </div>
+  </section>
+
+  <!-- PHASE 3 -->
+  <section class="panel" id="p3">
+    <div class="panel-head">
+      <div>
+        <h2>Phase 3 · Partners — Multi-Family Office</h2>
+        <div class="desc">Pre-Exit planning with Partners, carrying through to post-Exit entry into the Family Office.</div>
+      </div>
+      <div class="badge">Pre &amp; Post Exit</div>
+    </div>
+
+    <div class="exit-split">
+      <div class="exit-card">
+        <h4><span class="dot"></span>Pre-Exit · Partners</h4>
+        <div class="grid" style="grid-template-columns:1fr;">
+          <div class="item"><div class="name">Professional Advisory Services</div><div class="price">$400/hr</div></div>
+          <div class="item"><div class="name">M&amp;A Brokerage Success Fee</div><div class="price">1.5% of gross sale</div></div>
+          <div class="item"><div class="name">Equity Position</div><div class="price">1.5%</div></div>
+        </div>
+      </div>
+      <div class="exit-card">
+        <h4><span class="dot"></span>Post-Exit · Family Office</h4>
+        <div class="grid" style="grid-template-columns:1fr;">
+          <div class="item"><div class="name">Family Office Advisory</div><div class="price">1% p.a. on AUA</div></div>
+          <div class="item"><div class="name">Access to Addepar</div><div class="price">35 bps</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5;">Addepar access is included within Family Office Advisory (35 basis points on priced assets).</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Allegiance Partners</strong> — Pricing Schedule · For discussion purposes, subject to engagement letter
+</footer>
+
+<script>
+  document.querySelectorAll('.tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.panel).classList.add('active');
+    });
+  });
+</script>
+
+
+
+</body></html>
